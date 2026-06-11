@@ -50,6 +50,11 @@ intentionally kept monochromatic teal.
   `"Noto Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`.
 - Headings (`h1`–`h4`): weight `600`, `letter-spacing: -0.02em`, `line-height: 1.1`.
 - Body: `line-height: 1.6` (tighter prose blocks use `1.65`).
+- **Logo typography** — the wordmark in `logo.svg` is stored as outlined vector paths (no font is
+  embedded), so these are recorded from the brand owner rather than readable from the file:
+  - The **"Flexpair" wordmark (top line) is set in Syncopate.**
+  - The **line beneath it is Noto Sans** _(to re-confirm against the original editable design
+    source)._
 
 > **Implementation status:** the live site at `welcome.flexpair.com` (the Hugo site) already serves
 > Noto Sans — its andromeda theme hardcodes a Google Fonts load of
