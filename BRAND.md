@@ -51,10 +51,12 @@ intentionally kept monochromatic teal.
 - Headings (`h1`–`h4`): weight `600`, `letter-spacing: -0.02em`, `line-height: 1.1`.
 - Body: `line-height: 1.6` (tighter prose blocks use `1.65`).
 
-> **Known drift — fix in implementation, not here:** the Astro site's `global.css` currently
-> declares `--font-display: "Inter", …`, and the Hugo site sets no explicit font family (it falls
-> back to the theme default). Neither matches the Noto Sans brand intent. Reconcile the sites to
-> Noto Sans; until then, treat this guide as the brand standard.
+> **Implementation status:** the live site at `welcome.flexpair.com` (the Hugo site) already serves
+> Noto Sans — its andromeda theme hardcodes a Google Fonts load of
+> `Noto+Sans:ital,wght@0,100..900;1,100..900` in
+> `themes/andromeda-hugo/layouts/partials/essentials/script.html`. **Known drift:** the Astro
+> successor site's `global.css` still declares `--font-display: "Inter", …`. Reconcile Astro to
+> Noto Sans before it goes live at `welcome.flexpair.com`.
 
 ## Logo and icon assets
 
