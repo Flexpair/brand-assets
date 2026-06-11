@@ -4,10 +4,12 @@ Practical brand reference for the Flexpair assets in this repository. It documen
 are **actually in use** today; sections marked _Not yet defined_ are gaps, not invented rules — fill
 them deliberately rather than assuming a value.
 
-> **Single source of truth for the live palette and typography:**
+> **Source of truth for the palette:**
 > [`flexpair-astro-site/src/styles/global.css`](https://github.com/Flexpair/flexpair-astro-site/blob/main/src/styles/global.css)
-> (`@theme` block). The active marketing site is the canonical implementation; this file mirrors it
-> in prose. If the site palette changes, update this guide in the same change.
+> (`@theme` block) is the canonical implementation of the color ramp; this file mirrors it in prose.
+> If the site palette changes, update this guide in the same change.
+> **Typography is owner-defined here** (see below): the brand typeface is Noto Sans, and
+> implementations should conform to this guide, not the other way around.
 
 ## Color
 
@@ -44,11 +46,15 @@ intentionally kept monochromatic teal.
 
 ## Typography
 
-- **Display/UI typeface: Inter**, with the fallback stack
-  `"Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`
-  (`--font-display`).
+- **Brand typeface: Noto Sans.** Recommended fallback stack:
+  `"Noto Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`.
 - Headings (`h1`–`h4`): weight `600`, `letter-spacing: -0.02em`, `line-height: 1.1`.
 - Body: `line-height: 1.6` (tighter prose blocks use `1.65`).
+
+> **Known drift — fix in implementation, not here:** the Astro site's `global.css` currently
+> declares `--font-display: "Inter", …`, and the Hugo site sets no explicit font family (it falls
+> back to the theme default). Neither matches the Noto Sans brand intent. Reconcile the sites to
+> Noto Sans; until then, treat this guide as the brand standard.
 
 ## Logo and icon assets
 
