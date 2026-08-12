@@ -46,7 +46,7 @@ Brand teal ramp (from the site's `@theme`):
 | `brand-200` | `#a3d0d0` | |
 | `brand-300` | `#6eb5b5` | |
 | `brand-400` | `#339595` | |
-| `brand-500` | `#157878` | **canonical brand color** |
+| `brand-500` | `#157878` | **core teal** |
 | `brand-600` | `#126868` | hover / pressed |
 | `brand-700` | `#0e5353` | gradient mid |
 | `brand-800` | `#0a3e3e` | gradient deep |
