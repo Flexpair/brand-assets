@@ -15,8 +15,8 @@ both GitHub Copilot and Claude Code.
   explicit intent.
 - Reference assets from other repos by stable path (e.g. `brand-assets/logo.svg`); do not duplicate
   copies into consuming repos.
-- Brand-usage guidance lives in [`BRAND.md`](BRAND.md): the canonical teal `#157878`, the full
-  palette, Inter typography, and asset conventions. Its source of truth for the live palette is the
-  Astro site's `src/styles/global.css` — keep the two in sync. `BRAND.md` also lists the gaps that
-  are not yet defined (clear space, minimum size, reversed/monochrome variants); propose values
-  rather than assuming them.
+- Brand-usage guidance lives in [`BRAND.md`](BRAND.md): the four-color core palette, Noto Sans
+  typography, presentation rules, and asset conventions. The exact identity colors are owner-defined
+  there and encoded in `logo.svg`; the Astro site's `src/styles/global.css` owns only its derived UI
+  ramp. `BRAND.md` also lists the gaps that are not yet defined (clear space, minimum size,
+  reversed/monochrome variants); propose values rather than assuming them.
