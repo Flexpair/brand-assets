@@ -4,17 +4,38 @@ Practical brand reference for the Flexpair assets in this repository. It documen
 are **actually in use** today; sections marked _Not yet defined_ are gaps, not invented rules — fill
 them deliberately rather than assuming a value.
 
-> **Source of truth for the palette:**
-> [`flexpair-astro-site/src/styles/global.css`](https://github.com/Flexpair/flexpair-astro-site/blob/main/src/styles/global.css)
-> (`@theme` block) is the canonical implementation of the color ramp; this file mirrors it in prose.
-> If the site palette changes, update this guide in the same change.
+> **Source of truth for the core palette:** the exact identity colors are owner-defined here and
+> encoded in [`logo.svg`](logo.svg). The Astro site's
+> [`src/styles/global.css`](https://github.com/Flexpair/flexpair-astro-site/blob/main/src/styles/global.css)
+> owns a derived UI ramp; it does not redefine the four core colors.
 > **Typography is owner-defined here** (see below): the brand typeface is Noto Sans, and
 > implementations should conform to this guide, not the other way around.
 
 ## Color
 
-**Primary brand color: Flexpair teal `#157878`** (the `--color-brand-500` token; also the teal
-accent inside `logo.svg`). The brand is monochromatic teal on near-black ink over a white ground.
+The Flexpair identity uses exactly four core colors:
+
+| Role | Hex | Typical use |
+|---|---|---|
+| Black | `#000000` | primary text and dark grounds |
+| White | `#ffffff` | primary light ground and reversed text |
+| Flexpair teal | `#157878` | subdued text, structure, and supporting information |
+| Flexpair cyan | `#00ffff` | deliberate emphasis and signal accents |
+
+For presentations and documents, use black or white for primary text, teal for intentionally
+receding text, and cyan sparingly as the signal color. Cyan is not a body-text color on white;
+prefer a cyan shape or line with black text when emphasis is needed on a light ground. Do not add
+dark green, azure, amber, red, or other accent hues. If a quiet surface is necessary, use
+transparency or a white tint derived from teal or cyan rather than introducing another hue.
+
+The `X` path in `logo.svg` uses cyan `#00ffff` with a teal `#157878` stroke. The remaining wordmark
+paths are black.
+
+### Derived website ramp
+
+The Astro site's `@theme` derives a teal UI ramp from the core teal for interaction states and
+surface treatments. These are implementation shades, not additional identity colors and not a
+presentation palette:
 
 Brand teal ramp (from the site's `@theme`):
 
@@ -31,18 +52,10 @@ Brand teal ramp (from the site's `@theme`):
 | `brand-800` | `#0a3e3e` | gradient deep |
 | `brand-900` | `#062828` | gradient endpoint |
 
-Neutrals:
-
-| Token | Hex | Use |
-|---|---|---|
-| `ink`      | `#0b1020` | body text |
-| `ink-soft` | `#1a2140` | secondary text, soft headings |
-| background | `#ffffff` | page ground |
-
 Implementation note: the site remaps Tailwind's `indigo-*` (and `violet-*` for deep gradient
-endpoints) onto this teal ramp, so existing `bg-indigo-*` / `text-indigo-*` utilities resolve
-on-brand. Do not introduce a second accent hue without a deliberate brand decision — gradients are
-intentionally kept monochromatic teal.
+endpoints) onto this teal ramp, so existing `bg-indigo-*` / `text-indigo-*` utilities resolve to
+teal-derived UI shades. New presentation work must not copy this ramp as its color scheme; use the
+four core colors above.
 
 ## Typography
 
